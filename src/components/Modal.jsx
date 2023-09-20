@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-function ModalMoreInfo({ isActive, children, closeModal }) {
+function Modal({ isActive, children, closeModal }) {
   
    useEffect(() => {
     const handleKeyPress = (e) => {
@@ -30,10 +30,10 @@ function ModalMoreInfo({ isActive, children, closeModal }) {
    }, [isActive, closeModal]);
   return <div className={isActive ? 'modal_active' : 'modal_hidden'}>{children}</div>;
 }
-ModalMoreInfo.propTypes = {
+Modal.propTypes = {
   isActive: PropTypes.bool,
   closeModal: PropTypes.func,
   children: PropTypes.element
 };
 
-export default ModalMoreInfo;
+export default Modal;

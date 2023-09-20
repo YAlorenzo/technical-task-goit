@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorits, removeFavorits } from '../redux/advertsSlice';
 import { selectFavorits } from '../redux/selectors';
-import ModalMoreInfo from './modalMoreInfo';
+import Modal from './Modal';
 
 import { useState } from 'react';
 function AdvertsListItem({ elem }) {
@@ -76,7 +76,7 @@ function AdvertsListItem({ elem }) {
                         </button>
       </li>
 
-      <ModalMoreInfo isActive={isActiveModal} closeModal={closeModal}>
+      <Modal isActive={isActiveModal} closeModal={closeModal}>
         <div className='max-w-[470px] max-h-[700px] overflow-y-auto relative rounded-3xl p-5 bg-white'>
           <img src={elem.img} alt="photo" className='w-full max-h object-cover rounded-[14px]' />
           <h3 className='mt-[14px]'>{elem.make} <span className='text-blue'>{elem.model}</span>, {elem.year}</h3>
@@ -130,7 +130,7 @@ function AdvertsListItem({ elem }) {
           </a>
           <ClearIcon className='absolute top-1 right-1 cursor-pointer' onClick={closeModal} />
         </div>
-      </ModalMoreInfo>
+      </Modal>
     </>
     
   )
