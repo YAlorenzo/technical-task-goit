@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: 'Lexend Deca', sans-serif;
+}
+.active {
+  opacity: 1;
+}
+.custom-icon {
+  font-size: 5rem;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.slide_mobile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  height: 200px;
+}
+.my-thumbs{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.menuOpen {
+  position: absolute;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.menuClose {
+  display: none;
+  animation: fadeOut 0.3s ease-in-out;
+}
+.modal_hidden {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+.modal_active {
+  width: 100%;
+  height: 100%;
+  background: rgba(97, 97, 97, 0.6);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transform: scale(1);
+}
+
+@media screen and (min-width: 768px) {
+   .my-thumbs{
+    margin-top: 30px;
+    margin-bottom: 50px;
+   }
+}
+
+@layer base {
+  .fix-container{
+    @apply mx-auto px-[15px] sm:max-w-[480px] md:max-w-[768px] lg:max-w-[1440px];
+  }
+  .sectionTitle{
+    @apply text-2xl font-bold text-center sm:text-4xl lg:text-5xl text-black_gray
+  }
+  .section_margin{
+    @apply mt-10 sm:mt-20 lg:mt-32
+  }
+  .item_title {
+      @apply text-base sm:text-xl font-bold text-black
+  }
+  .item_text{
+    @apply text-gray_text text-sm font-medium
+  }
+  .car_info_margin{
+    @apply mx-1
+  }
+}
