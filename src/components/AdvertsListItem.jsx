@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addFavorits, removeFavorits } from '../redux/advertsSlice';
 import { selectFavorits } from '../redux/selectors';
 import ModalMoreInfo from './modalMoreInfo';
+
 import { useState } from 'react';
 function AdvertsListItem({ elem }) {
   const favorits = useSelector(selectFavorits);
