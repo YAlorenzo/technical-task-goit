@@ -1,32 +1,26 @@
-# AUTO.UA
+# 🚗 AUTO.UA
 
-## Технології
+## Description
 
-- React.js
-- Vite
-- Tailwind CSS
-- Material UI
-- Material UI Icons
-- React Router DOM
+AUTO.UA is a React website developed for a car rental company. The website consists of three main parts: Home, Catalog, and Favorites. Users can browse through a catalog of cars, filter them by mileage, rental price, and brand, and add their favorite cars to their favorites list. The Home page features a custom design, and the website utilizes a simple database to store car information.
 
-## Структура проекту
+## Features
 
-- `src/` - коренева папка проекту.
-  - `components/` - компоненти для сторінок.
-  - `assets/` - ресурси та асети для сторінок.
-  - `constants/` - файли з даними для списків та іншого, які відображаються через метод `map`.
-  - `Pages/` - сторінки проекту.
-  - `redux/` - файли для управління станом Redux.
-  - `index.css` - базові та активні стилі.
+- **Custom Home Design**: Designed a custom Home page layout.
+- **Catalog**: Browse and filter cars by mileage, rental price, and brand.
+- **Favorites**: Add cars to favorites list and view them later.
+- **Redux Toolkit**: Manage application state using Redux Toolkit API.
+- **Routing**: Navigate between pages using React Router.
+- **Mock API**: Used mockapi.io to create a simple database for car information.
+- **Axios**: Utilized Axios for asynchronous data fetching.
+- **Styling**: Tailwind CSS and Material UI for styling.
 
-## Функціональність
+## Tech Stack
 
-Цей проект є пет-проектом для оренди авто в Україні. Основні можливості включають:
-
-- Пошук автомобілів за параметрами, такими як пробіг, марка та ціна.
-- Додавання та видалення авто в улюблені.
-- Відображення списку улюблених авто на сторінці "Favorites".
-
-## Використання React Router DOM
-
-Для навігації між сторінками у проекті використовується бібліотека React Router DOM. Роутинг встановлюється та конфігурується в файлі `src/App.js` (або аналогічному).
+- **React**: Frontend framework.
+- **Vite**: Build tool for React project setup.
+- **Redux Toolkit**: State management library.
+- **React Router**: Routing library for React applications.
+- **Axios**: HTTP client for making asynchronous requests.
+- **Tailwind CSS**: Utility-first CSS framework.
+- **Material UI**: React components for faster and easier web development.
